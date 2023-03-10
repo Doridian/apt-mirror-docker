@@ -2,8 +2,7 @@
 
 FROM debian:bullseye-slim
 
-RUN apt update
-RUN apt install tar bzip2 gzip xz-utils gcc make perl wget rsync --no-install-recommends -y
+RUN apt update && apt install --no-install-recommends -y tar bzip2 gzip xz-utils gcc make perl wget rsync
 
 WORKDIR /apt-mirror
 COPY ./apt-mirror /apt-mirror

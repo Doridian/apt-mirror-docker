@@ -31,8 +31,6 @@ deb-arm64 http://ports.ubuntu.com/ubuntu-ports jammy-updates main restricted uni
 deb-arm64 http://ports.ubuntu.com/ubuntu-ports jammy-backports main restricted universe multiverse
 clean http://ports.ubuntu.com/ubuntu-ports
 
-deb-i386 https://nvidia.github.io/libnvidia-container/stable/ubuntu18.04/i386 /
-clean https://nvidia.github.io/libnvidia-container/stable/ubuntu18.04/i386
 deb-amd64 https://nvidia.github.io/libnvidia-container/stable/ubuntu18.04/amd64 /
 clean https://nvidia.github.io/libnvidia-container/stable/ubuntu18.04/amd64
 deb-arm64 https://nvidia.github.io/libnvidia-container/stable/ubuntu18.04/arm64 /

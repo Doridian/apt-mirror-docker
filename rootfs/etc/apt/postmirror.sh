@@ -1,6 +1,7 @@
-#!/bin/sh -e
+#!/bin/bash -e
+set -e
 
-bash /var/spool/apt-mirror/var/clean.sh
+/var/spool/apt-mirror/var/clean.sh
 
 # If you get hash mismatches, the following lines will sync each already-downloaded file (this is a long operation)
 #rsync -rcvv --stats --times --existing rsync://fr.archive.ubuntu.com/ubuntu/pool/ /var/spool/apt-mirror/mirror/archive.ubuntu.com/ubuntu/pool/

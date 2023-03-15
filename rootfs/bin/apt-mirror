@@ -119,7 +119,7 @@ use Getopt::Long;
 my $config_file;
 
 my %config_variables = (
-    "defaultarch" => `dpkg --print-architecture 2>/dev/null` || 'i386',
+    "defaultarch" => `dpkg --print-architecture 2>/dev/null` || 'amd64',
     "nthreads"    => 20,
     "base_path"   => '/var/spool/apt-mirror',
     "mirror_path" => '$base_path/mirror',
@@ -134,7 +134,7 @@ my %config_variables = (
     "auth_no_challenge"    => 0,
     "no_check_certificate" => 0,
     "no_verbose"           => 0,
-    "unlink"               => 0,
+    "unlink"               => 1,
     "postmirror_script"    => '/etc/apt/postmirror.sh',
     "use_proxy"            => 'off',
     "http_proxy"           => '',

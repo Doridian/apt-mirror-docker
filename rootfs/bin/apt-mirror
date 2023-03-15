@@ -238,18 +238,12 @@ sub quoted_path
 
 sub lock_aptmirror
 {
-    open( LOCK_FILE, '>', get_variable("var_path") . "/apt-mirror.lock" );
-    my $lock = flock( LOCK_FILE, LOCK_EX | LOCK_NB );
-    if ( !$lock )
-    {
-        die("apt-mirror is already running, exiting");
-    }
+
 }
 
 sub unlock_aptmirror
 {
-    close(LOCK_FILE);
-    unlink( get_variable("var_path") . "/apt-mirror.lock" );
+
 }
 
 sub download_urls

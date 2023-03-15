@@ -1,24 +1,12 @@
-# Building apt-mirror from sources
-
 FROM debian:bullseye-slim
 
-RUN apt update && apt install --no-install-recommends -y tar bzip2 gzip xz-utils gcc make perl wget rsync
+RUN apt update && apt install --no-install-recommends -y tar bzip2 gzip xz-utils perl wget rsync
 
-WORKDIR /apt-mirror
-COPY ./apt-mirror /apt-mirror
-COPY ./.perltidyrc /apt-mirror
-COPY ./Makefile /apt-mirror
-COPY ./mirror.list /apt-mirror
-COPY ./postmirror.sh /apt-mirror
-
-COPY ./entrypoint.sh /entrypoint.sh
-RUN chmod 755 /entrypoint.sh
+COPY rootfs/ /
+RUN chmod 755 /bin/apt-mirror /etc/apt/*.sh
 
 ENV PUID=1000
 ENV PGID=1000
 
-RUN make
-RUN make install
-
 USER ${PUID}:${PGID}
-CMD ["/entrypoint.sh"]
+CMD ["/bin/apt-mirror"]

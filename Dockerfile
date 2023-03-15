@@ -17,8 +17,8 @@ RUN chmod 755 /entrypoint.sh
 ENV PUID=1000
 ENV PGID=1000
 
-USER ${PUID}:${PGID}
 RUN make
 RUN make install
 
+USER ${PUID}:${PGID}
 CMD ["/entrypoint.sh"]

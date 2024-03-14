@@ -2,6 +2,7 @@ set defaultarch       amd64
 set nthreads          6
 set limit_rate        100m
 
+# Ubuntu 22.04 LTS
 deb-i386 http://archive.ubuntu.com/ubuntu jammy main restricted universe multiverse
 deb-i386 http://archive.ubuntu.com/ubuntu jammy-updates main restricted universe multiverse
 deb-i386 http://archive.ubuntu.com/ubuntu jammy-backports main restricted universe multiverse
@@ -20,6 +21,26 @@ deb-arm64 http://ports.ubuntu.com/ubuntu-ports jammy-updates main restricted uni
 deb-arm64 http://ports.ubuntu.com/ubuntu-ports jammy-backports main restricted universe multiverse
 clean http://ports.ubuntu.com/ubuntu-ports
 
+# Ubuntu 24.04 LTS
+deb-i386 http://archive.ubuntu.com/ubuntu noble main restricted universe multiverse
+deb-i386 http://archive.ubuntu.com/ubuntu noble-updates main restricted universe multiverse
+deb-i386 http://archive.ubuntu.com/ubuntu noble-backports main restricted universe multiverse
+deb-amd64 http://archive.ubuntu.com/ubuntu noble main restricted universe multiverse
+deb-amd64 http://archive.ubuntu.com/ubuntu noble-updates main restricted universe multiverse
+deb-amd64 http://archive.ubuntu.com/ubuntu noble-backports main restricted universe multiverse
+clean http://archive.ubuntu.com/ubuntu
+
+deb-i386 http://security.ubuntu.com/ubuntu noble-security main restricted universe multiverse
+deb-amd64 http://security.ubuntu.com/ubuntu noble-security main restricted universe multiverse
+clean http://security.ubuntu.com/ubuntu
+
+deb-arm64 http://ports.ubuntu.com/ubuntu-ports noble main restricted universe multiverse
+deb-arm64 http://ports.ubuntu.com/ubuntu-ports noble-security main restricted universe multiverse
+deb-arm64 http://ports.ubuntu.com/ubuntu-ports noble-updates main restricted universe multiverse
+deb-arm64 http://ports.ubuntu.com/ubuntu-ports noble-backports main restricted universe multiverse
+clean http://ports.ubuntu.com/ubuntu-ports
+
+# nVidia
 deb-amd64 https://nvidia.github.io/libnvidia-container/stable/ubuntu18.04/amd64 /
 clean https://nvidia.github.io/libnvidia-container/stable/ubuntu18.04/amd64
 deb-arm64 https://nvidia.github.io/libnvidia-container/stable/ubuntu18.04/arm64 /

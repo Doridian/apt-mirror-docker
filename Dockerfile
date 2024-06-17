@@ -1,4 +1,4 @@
-FROM debian:bullseye-slim
+FROM debian:bookworm-slim
 
 RUN apt update && apt install --no-install-recommends -y tar bzip2 gzip xz-utils perl wget rsync
 
